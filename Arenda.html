@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда квартиры</title>
+    <link rel="stylesheet" type="text/css" href="Arenda.css">
+    <style>
+        body {
+            position: absolute;
+            background-image: url('Аренда.jpg'); /* Replace 'your_image.jpg' with the path to your image */
+            background-size: auto;
+            background-repeat: no-repeat;
+            max-width: 600px;
+    margin: 0 auto;
+    padding: 20px; 
+             
+            
+        }
+        /* Add additional styling here */
+      </style>
+</head>
+<button onclick="window.history.back();" style="background-color: transparent; border: none;"><img src="Vector.jpg" alt="Back"></button>
+<body>
+    <!--<div class="address-block">
+        <h2 style="font-weight: bold;">Центральный</h2>
+        <p>г. Тюмень, Мельникайте, д. 70</p>
+    </div> -->
+    <div class="container">
+        <form id="1" action="#" method="post">
+        <div class="address-block">
+            <h2>Оставшееся время аренды:</h2>
+            <p id="timer"></p>
+            <!--<button class="button">Продлить</button>-->
+            <script>
+                // Определение времени аренды
+                var startDate = new Date("2024-05-01");
+                var endDate = new Date("2024-12-01");
+                var timerElement = document.getElementById("timer");
+
+                // Функция для обновления таймера
+                function updateTimer() {
+                    var now = new Date();
+                    var timeDiff = endDate.getTime() - now.getTime();
+                    if (timeDiff > 0) {
+                       
+                        var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                       
+                        timerElement.innerHTML = hours + "ч " + minutes + "м ";
+                    } else {
+                        timerElement.innerHTML = "Аренда закончилась";
+                    }
+                }
+
+                // Обновление таймера каждую секунду
+                setInterval(updateTimer, 1000);
+            </script>
+            </form>
+        </div>
+        <!--<div>
+            <form class="button1">
+        <button class="button1">Оплата счетчиков</button>
+        <button class="button1">Чат поддержки</button>
+            </form>
+        </div>
+       <div class="container1">
+        <input type="text" id="phone" name="phone" placeholder="Подъезд">
+        <input type="text" id="phone" name="phone" placeholder="Этаж">
+
+        <input type="text" id="phone" name="phone" placeholder="Квартира">
+
+
+
+       </div>-->
+        
+    </div>
+
+    <script>
+        function editBlock(id) {
+            var element = document.getElementById(id);
+            var newValue = prompt("Введите новое значение", element.innerText);
+            if (newValue !== null) {
+                element.innerText = newValue;
+            }
+        }
+    </script>
+</body>
+</html>

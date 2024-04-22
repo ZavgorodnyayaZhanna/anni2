@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валидация номера телефона</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="authorization.css">
+    
+</head>
+<button onclick="window.history.back();" style="background-color: transparent; border: none;"><img src="Vector.jpg" alt="Back"></button>
+<body>
+    <div class="container">
+        <h1 style="color:#F28442;  font-family: Montserrat regular 24px;">Введите номер телефона</h1>
+      
+    </div>
+    <div class="container1">
+
+        <form id="phoneForm" action="#" method="post">
+            <input type="text" id="phone" name="phone" placeholder="Введите номер телефона" oninput="showSMSButton()" required>
+            
+    
+        </form>
+    </div>
+    <form id="phoneForm2" action="#" method="post">
+        
+        
+        <button type="submit" id="smsButton" class="btn" onclick="window.location.href='Code.html'" >Отправить СМС с кодом</button>
+        
+    </form>
+    <script>
+        function showSMSButton() {
+            var phoneNumber = document.getElementById("phone").value;
+            var smsButton = document.getElementById("smsButton");
+            if (phoneNumber.length > 17) {
+                smsButton.style.display = "flex";
+            } else {
+                smsButton.style.display = "none";
+            }
+        }$(document).ready(function() {
+            $('#phone').mask('+7 (999) 999-99-99');
+        });
+        
+        $('#phoneForm2').submit(function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы
+            // Ваш код для отправки SMS кода
+            alert('SMS код отправлен!');
+        });
+        </script>
+
+
+</body>
+</html>

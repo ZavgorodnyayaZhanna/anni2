@@ -1,0 +1,70 @@
+body {
+    background-color: #FFFFFF; /* Белый цвет фона */
+    color: #000000; /* Черный цвет текста */
+    font-family: Montserrat; /* Шрифт */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем отступы */
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container1 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.block {
+   
+    width: 100%; /* Растягиваем блок по всей ширине */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+.block h2 {
+    cursor: pointer; /* Делаем заголовки блоков активными */
+}
+.button {
+    background-color: #f7b891;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Перенос кнопки вправо */
+}
+.button1 {
+    background-color: #fdfdfd; /* Красный цвет кнопки */
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.support-button {
+    background-color: #F28442; /* Красный цвет кнопки поддержки */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.address-block {
+    /* background-color: #F28442; Красный цвет кнопки поддержки */ 
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%; /* Растягиваем блок по всей ширине */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+    
+}
+.timer {
+    font-size: 1.2em; /* Размер текста таймера */
+    font-weight: bold; /* Жирный текст */
+    color: #F28442; /* Красный цвет для таймера */
+    float: left; /* Перенос таймера влево */
+}
